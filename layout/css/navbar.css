@@ -1,0 +1,49 @@
+header {
+    background-color: #353b48;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    float: left;
+}
+
+header h1 a:hover {
+    color: #0097e6
+}
+
+header h1 a{
+    text-decoration: none;
+    color: #f5f6fa;
+    font-family: 'cairoregular';
+}
+
+header nav {
+    float: right;
+}
+
+header nav a {
+    color: #f5f6fa;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px;
+    text-decoration: none;
+}
+/* #3b5998 #e1306c #1da1f2 #dd4b39*/
+header nav a:hover {
+    background-color: #f5f6fa;
+    color: #353b48
+}
+
+header nav a.facebook:hover{
+    color: #3b5998
+}
+header nav a.instagram:hover{
+    color: #e1306c
+}
+header nav a.twitter:hover{
+    color: #1da1f2
+}
+header nav a.google:hover{
+    color: #dd4b39
+}
