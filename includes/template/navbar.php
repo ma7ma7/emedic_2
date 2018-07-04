@@ -2,7 +2,7 @@
     <div class="container">
         <h1><a href="index.php" class="logo"><span>E</span>-Medic</a></h1>
         <nav>
-            <a href="#" class="selected">Accueil</a>
+            <a href="#" class="active">Accueil</a>
             <a href="#">à propos</a>
             <a href="content/nous-contacter.php">Nous Contacter</a>
             <a href="#" class="facebook">

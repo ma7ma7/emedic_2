@@ -1,3 +1,7 @@
+.active {
+    background-color: rgba(2, 2, 2, 0.4);
+}
+
 header {
     background-color: #353b48;
     overflow: hidden;
@@ -6,6 +10,7 @@ header {
 header h1 {
     margin: 0;
     float: left;
+    padding-top: 5px
 }
 
 header h1 a:hover {
@@ -16,6 +21,7 @@ header h1 a{
     text-decoration: none;
     color: #f5f6fa;
     font-family: 'cairoregular';
+    padding-top: 15px
 }
 
 header nav {
@@ -26,7 +32,7 @@ header nav a {
     color: #f5f6fa;
     display: inline-block;
     font-size: 18px;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
 }
 /* #3b5998 #e1306c #1da1f2 #dd4b39*/

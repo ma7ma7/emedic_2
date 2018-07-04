@@ -1,8 +1,19 @@
+body {
+    background: url('../imgs/bg.jpeg');
+    height: 100vh;
+    background-size: cover;
+    box-sizing: border-box
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
     padding-left: 6px;
     padding-right: 6px; 
+}
+
+.text-center{
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -23,3 +34,45 @@
     }
 }
 
+/* Connection */
+.container .connection{
+    width: 380px;
+    background-color: rgba(2, 2, 2, 0.4);
+    min-height: 50px;
+    margin-top: 80px;
+    padding: 20px;
+    overflow: hidden;
+    color: #fff
+}
+
+.container .connection h4 {
+    padding-bottom: 15px;
+    font-size: 24px;
+    margin: 0;
+    color: #fff
+}
+
+.container .connection form label{
+    display: inline-block;
+    float: left;
+    margin-bottom: 10px;
+    padding: 7px
+}
+
+.container .connection form label[for="password"] {
+    padding-top: 10px
+}
+
+.container .connection form input:not([type="submit"]){
+    display: inline-block;
+    float: right;
+    width: 250px;
+    margin-bottom: 10px;
+    padding: 7px
+}
+
+.container .connection p {
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer 
+}
