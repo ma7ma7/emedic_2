@@ -5,7 +5,8 @@ $(document).ready(function(){
 
     $(document).on("click", '.selected-one', function(event){
         $('.login-nav').slideUp(1000);
-        var source = "layout/views/" + $(this).attr('data-class') + ".php";
+        var source = "control/" + $(this).attr('data-class') + ".php";
         $('#reception').load(source);
+        console.log(source)
     });
 });
