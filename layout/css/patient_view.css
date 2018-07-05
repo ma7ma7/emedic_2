@@ -1,0 +1,54 @@
+.myform {
+    max-width: 400px;
+    margin-top: 80px;
+    background-color: rgba(2, 2, 2, 0.4);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.myform form input:not([type="checkbox"]),
+.myform form select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 1px 2px #000;
+}
+
+
+.myform form input[type="submit"]{
+    margin-bottom: 0;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+    transition: all .5s ease-in-out
+}
+
+.myform form input[type="submit"]:hover{
+    background-color: #02bbe6;
+    color: #fff;
+}
+.myform form p a {
+    color: #fff
+}
+.myform form i {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    transition: all .5s ease-in-out;
+    cursor: pointer
+}
+
+.myform form i:hover{
+    color: #02bbe6;;
+    font-size: 28px;
+    top: -10px;
+    right: -10px;
+    transform: rotate(180deg)
+}
