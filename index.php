@@ -16,13 +16,15 @@
                 <label for="password">Mot de passe : </label>
                 <input type="password" id="password" name="conn_password" placeholder="Mot de passe"  autocomplete="off"/> </br>
                 <input type="submit" value="validez"/>
-                <p class="text-center">Ou crée un compte ?</p>
+                <p class="text-center" id="creat">Ou crée un compte ?</p>
             </form>   
         </div>
     </div>
 
-    <div id="reception">
-        
+    <div class="container">
+        <div id="reception">
+
+        </div>
     </div>
 
 

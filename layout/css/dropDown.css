@@ -1,0 +1,36 @@
+.login-nav{
+    background-color: rgba(53, 59, 72,0.5);
+    font-size: 25px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-top: 80px;
+    width: 380px;
+    color: #fff;
+}
+
+.login-nav ul li {
+    padding: 20px;
+    padding-left: 0;
+    list-style: none;
+    cursor: pointer;
+    margin-left: -40px;
+}
+
+.login-nav ul li i {
+    padding-left: 20px
+}
+
+
+.login-nav ul li:hover{
+    background-color: #fff;
+    color: #000
+}
+
+.login-nav .shoose_one{
+    display: none;
+}
+
+.login-nav .shoose_one:hover {
+    background-color: rgba(223, 230, 233,1.0);
+    padding-left: 30px;
+}
