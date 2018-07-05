@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'cairoregular';
+    src: url('../fonts/cairo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/cairo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+
+body{
+    background: url(../imgs/bg.jpg);
+    background-size: cover;
+ 
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'cairoregular';
+}
+h2 {
+    background-color: rgba(20, 160, 182, .7);
+    color: #fff;
+    width: 0px;
+    margin-bottom: 0;
+    margin-top: 80px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+form{
+    width: 0px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(236, 240, 241, .7);
+    border-radius: 0px 0px 20px 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+form input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px
+}
+
+form input[type="submit"]{
+    background-color: rgb(20, 160, 182);
+    color: #fff;
+    border: none;
+    transition: all .5s ease-in-out
+}
+
+form input[type="submit"]:hover{
+    background-color: #fff;
+    color: rgb(20, 160, 182);
+}
+
+.icons {
+    display: inline-block;
+    float: right;
+    margin-right: 14px;
+    margin-top: -53px;
+    font-size: 24px;
+    color: rgb(20, 160, 182);
+}
