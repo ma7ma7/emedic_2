@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?= $css ?>acceuile.css"/>
     <link rel="stylesheet" href="<?= $css ?>navbar.css"/>
     <link rel="stylesheet" href="<?= $css ?>dropDown.css"/>
-    <link rel="stylesheet" href="<?= $css ?>patient_view.css"/>
+    <link rel="stylesheet" href="<?= $css ?>form_view.css"/>
     <link rel="stylesheet" href="<?= $css ?>font-awesome.min.css"/>
 </head>
 <body>

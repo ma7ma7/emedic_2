@@ -1,5 +1,5 @@
 <div class="patient myform">
-    <form action="includes/modele/patient_model.php" method="post">
+    <form action="includes/modele/form_model.php" method="post">
       <input type="text" name="nom" id="nom" placeholder="Votre Nom *"/></br>
 
       <input type="text" name="prenom" id="prenom" placeholder="Votre Prenom"/></br>
