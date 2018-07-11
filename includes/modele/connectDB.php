@@ -10,7 +10,6 @@
     try{
         $con = new PDO($dsn, $user, $pass, $options );
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     }catch(PDOException $e){
         echo "Failed Connection" . $e->getMessage();    
     }
