@@ -1,0 +1,107 @@
+body {
+    background-color: #f5f6fa
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0
+  } 
+
+@media (min-width: 768px) {
+    .container {
+      width: 732px; 
+    } 
+}
+
+@media (min-width : 992px){
+    .container {
+        width: 952px; 
+    }
+}
+
+@media (min-width : 1200px){
+    .container{
+        width: 1152px;
+    }
+}
+
+
+header {
+    background-color: rgba(2,2,2,.7);
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    float: left;
+    padding-top: 5px
+}
+
+header h1 a:hover {
+    color: #0097e6
+}
+
+header h1 a{
+    text-decoration: none;
+    color: #f5f6fa;
+    font-family: 'cairoregular';
+    padding-top: 15px
+}
+
+header nav {
+    float: right;
+    font-size: 0px;
+}
+
+header nav a {
+    color: #f5f6fa;
+    display: inline-block;
+    font-size: 24px;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    margin-right: 8px
+}
+
+header nav a:hover {
+    background-color: #f5f6fa;
+    color: #353b48
+}
+
+.notif{
+    position: relative;
+}
+
+.notif::after{
+    content: "+2";
+    position: absolute;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: #f00;
+    color: #f5f6fa;
+    padding: 3px;
+    left: 33px;
+    top: 7px;
+}
+
+/* Start left side */
+.left-side{
+    border-top: 2px solid #f5f6fa;
+    width: 300px;
+    background-color:  rgba(2,2,2,.6);
+    height: calc(100vh - 46.67px);
+    color: #f5f6fa;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.left-side img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #222;
+    display: block;
+    margin: 0 auto
+}
