@@ -70,6 +70,7 @@ header nav a:hover {
     color: #353b48
 }
 
+/* the notif */
 .notif{
     position: relative;
 }
@@ -104,4 +105,71 @@ header nav a:hover {
     border: 2px solid #222;
     display: block;
     margin: 0 auto
+}
+
+/* start profile pic*/
+.left-side .profile-pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #090909,rgba(91, 91, 91, 0.2),rgba(1,1,1,0));
+    position: absolute;
+    top: 72px;
+    left: 75px;
+    display: none
+}
+
+.left-side .profile-pic i {
+    font-size: 2.6em;
+    text-shadow: 5px 5px 10px #000;
+    position: relative;
+    top: 96px;
+    left: 53px;
+    color: rgba(255,255,255,.7);
+    cursor: pointer;
+}
+
+/* start search feild */
+
+div.search-feild{
+    display: inline-block;
+    float: right;
+    direction: rtl;
+    padding-right: 10px
+}
+
+div.search-feild .fa-search {
+    position: relative;
+    right: 0px;
+    top: 13px;
+    font-size: 20px;
+    color: #f5f6fa;
+    transition: all .5s ease-in-out;
+}
+
+div.search-feild .fa-search:hover{
+    transform: scale(1.2)
+}
+
+div.search-feild input[type="search"]{
+    padding: 6px;
+    padding-left: 20px;
+    margin-top: 8px;
+    width: 250px;
+    border: none;
+    display: none;
+    transition: all .2s ease-in-out
+}
+
+div.search-feild .fa-times {
+    position: relative;
+    right: 248px;
+    top: 0;
+    color: #7f7f80;
+    transition: all .5s ease-in-out;
+    display: none;
+}
+
+.fa-sign-out{
+    cursor: pointer;
 }
