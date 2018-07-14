@@ -4,4 +4,5 @@
     $imgs = "layout/imgs/";
     $includes ="template/includes/";
     $views = "layout/views/";
+    $main = "../index.php";
     

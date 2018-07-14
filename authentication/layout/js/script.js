@@ -30,4 +30,20 @@ $(document).ready(function(){
         $(this).hide();
     });
 
+    // start the avatar change 
+    $(".left-side .profile-pic i").on('click',function(){
+        $('.left-side div.upload-image-overlay').show()
+    }); 
+
+    $(".left-side div.upload-image-overlay .close-form").on('click',function(){
+        $('.left-side div.upload-image-overlay').hide()
+    }); 
+
+    $(".left-side div.upload-image-overlay").on('click',function(){
+        $(this).hide();
+    }); 
+
+    $(".left-side div.upload-image-overlay .render").on('click',function(event){
+        event.stopPropagation();
+    }); 
 });

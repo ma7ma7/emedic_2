@@ -1,4 +1,13 @@
 <?php 
+    session_start();
+
+    if (isset($_SESSION['Username'])) {
+        if ($_SESSION['GroupID'] == 1) {
+            header('Location: authentication/pat_auth.php');
+        }else{
+            header('Location: authentication/doc_auth.php');
+        }
+    }
 
     include "init.php";
     // the header
@@ -16,7 +25,7 @@
         $pass_auth = $_POST['conn_password'];
         $hash_pass_auth = sha1($pass_auth);
 
-        $stm = $con->prepare('SELECT Email,Password,GroupID FROM users WHERE Email = ? AND Password = ? AND GroupID > 0');
+        $stm = $con->prepare('SELECT Email,Password,GroupID,Nom FROM users WHERE Email = ? AND Password = ? AND GroupID > 0');
 
         $stm->execute(
             array(
@@ -25,13 +34,24 @@
             )
         );
 
-        // $count = $stm->rowCount();
+        $count = $stm->rowCount();
+        $row = $stm->fetch();
+        $username = $row['Nom'];
+        $groupID = $row['GroupID'];
 
-        // if ($count > 0) {
-        //     echo "Welcome : " . $user_auth;
-        // }
+        if ($count > 0) {
 
-        
+            $_SESSION['Username'] = $username;
+            $_SESSION['GroupID'] = $groupID;
+
+            if ($_SESSION['GroupID'] == 1) {   
+                header('Location: authentication/pat_auth.php');
+                exit();
+            } else {  
+                header('Location: authentication/doc_auth.php');
+                exit();
+            }
+        }
     }
 ?>
     <div class="container">

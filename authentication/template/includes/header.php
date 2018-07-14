@@ -5,6 +5,7 @@
     <title>Page Title</title>
     <link rel="stylesheet" href="<?= $css . "style.css"; ?>" />
     <link rel="stylesheet" href="<?= $css . "font-awesome.min.css"; ?>" />
+    <link rel="stylesheet" href="<?= $css . "fonts.css"; ?>" />
     <link rel="stylesheet" href="<?= $css . "normalize.css"; ?>" />
 </head>
 <body>

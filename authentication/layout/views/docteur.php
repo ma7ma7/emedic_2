@@ -11,4 +11,14 @@
     <div>
         Calendrier
     </div>
+    <div class="upload-image-overlay">
+        <div class="render">
+        <i class="fa fa-times-circle close-form" aria-hidden="true"></i>
+            <h3>Ajouter une photo de profil</h3>
+            <form>
+                <input type="file" name="profile" accept="image/*"/>
+                <input type="submit" value="Changer"/>
+            </form>
+        </div>
+    </div>
 </div>

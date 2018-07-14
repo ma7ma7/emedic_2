@@ -6,7 +6,7 @@
             <a href="#" class="notif"><i class="fa fa-bell" aria-hidden="true"></i></a>
             <a href="#" class="notif"><i class="fa fa-comments" aria-hidden="true"></i></a>
             <a href="#" class="notif"><i class="fa fa-calendar" aria-hidden="true"></i></a>
-            <a><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            <a href="destroy_session.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </nav>
         <div class="search-feild">
             <i class="fa fa-search" aria-hidden="true"></i>
