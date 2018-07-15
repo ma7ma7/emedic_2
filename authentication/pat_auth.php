@@ -73,6 +73,24 @@
     }
 ?>
 
+<?php 
+    $stm = $con->prepare("SELECT Username FROM users WHERE GroupID = 2");
+    $stm->execute();
+
+    $count = $stm->rowCount();
+    $table_result = array();
+    if ($count > 0) {
+        while($row = $stm->fetch()){
+            $table_result[] = $row['Username'];
+        }
+
+        // echo'<pre>';
+        // print_r($table_result);
+        // echo '</pre>';
+    }
+    
+?>
+
 
 <?php
     include $includes . "footer.php";
