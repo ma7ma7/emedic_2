@@ -8,9 +8,13 @@
     include $includes . "navbar.php";
 
 ?>
+
 <?php
+    // Connexion infos
     if(isset($_SESSION['Username'])){
         if ($_SESSION['GroupID'] == 1) {
+            print_r($_SESSION);
+            echo $_SERVER['DOCUMENT_ROOT'];
 ?>
         <div class="left-side">
             <div id="avatar">
@@ -37,8 +41,8 @@
             </div>
         </div>
         <div class="content">
-            <form>
-                <input id="autocomplete"/>
+            <form method="post" action="<?= $_SERVER['PHP_SELF'];?>">
+                <input id="autocomplete" name="autocomplete"/>
                 <input type="date" name="rdv"/>
                 <select name="houre">
                     <optgroup label="Le matin">
@@ -63,6 +67,7 @@
                         <option value="18h00">18h00</option>
                     </optgroup>
                 </select>
+                <!-- <input type="text" id="myresult"/> -->
                 <input type="submit" value="valider"/>
             </form>
         </div>
@@ -74,6 +79,7 @@
 ?>
 
 <?php 
+    // search query 
     $stm = $con->prepare("SELECT Username FROM users WHERE GroupID = 2");
     $stm->execute();
 
@@ -87,10 +93,17 @@
         // echo'<pre>';
         // print_r($table_result);
         // echo '</pre>';
-    }
-    
+    }  
 ?>
 
+<?php 
+    // insert RDV on DB
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        echo $_POST['autocomplete'] . "</br>";
+        echo $_POST['rdv'] . "</br>";
+        echo $_POST['houre'] . "</br>";
+    }
+?>
 
 <?php
     include $includes . "footer.php";

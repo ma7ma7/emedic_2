@@ -17,8 +17,10 @@
                     // echo $_POST['sexe']. '</br>';
                     // echo $_POST['groupID'];
 
-                    $stm = $con->prepare('INSERT INTO users(Nom,Prenom,Password, Email, DateNaissance, Sexe, GroupID) VALUES (:nom, :prenom, :pass, :email, :dateN, :sexe, :grp) ');
+                    $stm = $con->prepare('INSERT INTO users(Username,Nom,Prenom,Password, Email, DateNaissance, Sexe, GroupID) VALUES (:username, :nom, :prenom, :pass, :email, :dateN, :sexe, :grp) ');
+                    $usrname = $_POST['nom'] . " " . $_POST['prenom']; 
                     $stm->execute(array(
+                        "username" => $usrname,
                         "nom" => $_POST['nom'],
                         "prenom"  => $_POST['prenom'],
                         "pass"  => $hashedPass,

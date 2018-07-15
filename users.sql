@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 05, 2018 at 09:37 PM
+-- Generation Time: Jul 15, 2018 at 06:34 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -31,6 +31,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID of users',
+  `Username` varchar(255) NOT NULL DEFAULT 'user',
   `Nom` varchar(255) NOT NULL,
   `Prenom` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
@@ -40,14 +41,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   `GroupID` int(11) NOT NULL,
   `Status` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `Nom`, `Prenom`, `Password`, `Email`, `DateNaissance`, `Sexe`, `GroupID`, `Status`) VALUES
-(1, '', '', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'elhartif@gmail.com', '1996-10-04', 'Feminin', 0, 0);
+INSERT INTO `users` (`ID`, `Username`, `Nom`, `Prenom`, `Password`, `Email`, `DateNaissance`, `Sexe`, `GroupID`, `Status`) VALUES
+(1, 'elharti', 'Fatima Ezzahra', 'elharti', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'elhartif@gmail.com', '1996-10-04', 'Feminin', 0, 0),
+(21, 'user', 'mido', 'bellib', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'lyndaaccountfree@aditus.info', '2018-12-31', 'masculin', 1, 0),
+(20, 'user', 'doctorina', 'Chopper', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'doctorina@gmail.com', '1964-04-26', 'Feminin', 2, 0),
+(22, 'user', 'jhone', 'legend', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'mm@gmail.com', '1969-12-31', 'masculin', 2, 0),
+(23, 'user', 'mmm', 'mmm', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'll@gmail.com', '2016-11-30', 'Feminin', 2, 0),
+(24, 'mahoud', 'amane', 'mahmoud', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'mmm@gmail.com', '2018-07-10', 'masculin', 2, 0),
+(25, 'amanemahmoud', 'amane', 'mahmoud', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'dima@gmail.com', '2018-07-20', 'masculin', 1, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

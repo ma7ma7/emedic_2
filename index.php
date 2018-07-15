@@ -25,7 +25,7 @@
         $pass_auth = $_POST['conn_password'];
         $hash_pass_auth = sha1($pass_auth);
 
-        $stm = $con->prepare('SELECT Email,Password,GroupID,Nom FROM users WHERE Email = ? AND Password = ? AND GroupID > 0');
+        $stm = $con->prepare('SELECT ID,Email,Password,GroupID,Nom FROM users WHERE Email = ? AND Password = ? AND GroupID > 0');
 
         $stm->execute(
             array(
@@ -38,11 +38,13 @@
         $row = $stm->fetch();
         $username = $row['Nom'];
         $groupID = $row['GroupID'];
+        $userID = $row['ID'];
 
         if ($count > 0) {
 
             $_SESSION['Username'] = $username;
             $_SESSION['GroupID'] = $groupID;
+            $_SESSION['userID'] = $userID;
 
             if ($_SESSION['GroupID'] == 1) {   
                 header('Location: authentication/pat_auth.php');
