@@ -22,7 +22,7 @@
             <p>Rendez-vous</p>
             <p>Commentaires</p>
             <p>Mes publications</p>
-            <div>
+            <div id="calender">
                 Calendrier
             </div>
             <div class="upload-image-overlay">
@@ -43,7 +43,7 @@
     }
 ?>
 
-<div class="content">
+<div class="content" id="content">
     <form method="post" action="<?= $_SERVER['PHP_SELF'];?>">
         <input type="date" id="myDate" name="myDate"/>
         <input type="submit" value="oke">

@@ -238,10 +238,12 @@ div.search-feild .fa-times {
 }
 
 /* start the center */
-
+#calender{
+    cursor: pointer;
+}
 div.content {
     float: left;
-    width: 70%
+    width: 70%;
 }
 
 div.content form {
@@ -250,6 +252,7 @@ div.content form {
     box-sizing: border-box;
     padding: 20px;
     margin: 2px;
+    display: none
 }
 
 div.content form input,

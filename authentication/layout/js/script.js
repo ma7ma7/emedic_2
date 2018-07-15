@@ -46,4 +46,11 @@ $(document).ready(function(){
     $(".left-side div.upload-image-overlay .render").on('click',function(event){
         event.stopPropagation();
     }); 
+
+    $('#calender').on('click',function(){
+       $('div.content form').show() 
+     });
+    $('#calender-icon').on('click',function(){
+       $('div.content form').show() 
+     });
 });
