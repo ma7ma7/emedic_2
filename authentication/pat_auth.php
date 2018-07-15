@@ -12,15 +12,13 @@
 <?php
     // Connexion infos
     if(isset($_SESSION['Username'])){
-        if ($_SESSION['GroupID'] == 1) {
-            print_r($_SESSION);
-            echo $_SERVER['DOCUMENT_ROOT'];
+        if ($_SESSION['GroupID'] == 1) {;
 ?>
         <div class="left-side">
             <div id="avatar">
-                <img src="<?= $imgs . 'doctor-single.jpg';?>" alt="avatar"/>
+                <img src="<?= $imgs . 'patient.jpg';?>" alt="avatar"/>
                 <div class="profile-pic"><i class="fa fa-camera" aria-hidden="true"></i></div>
-                <h3><?=$_SESSION['Username']?></h3>
+                <h3><?=$_SESSION['Username'] . " " . $_SESSION['Prenom']?></h3>
             </div>
             <p>Abonnements</p>
             <p>Rendez-vous</p>
@@ -46,25 +44,25 @@
                 <input type="date" name="rdv"/>
                 <select name="houre">
                     <optgroup label="Le matin">
-                        <option value="09h00">09h00</option>
-                        <option value="09h30">09h30</option>
-                        <option value="10h00">10h00</option>
-                        <option value="10h30">10h30</option>
-                        <option value="11h00">11h00</option>
-                        <option value="11h30">11h30</option>
-                        <option value="12h00">12h00</option>
-                        <option value="12h30">12h30</option>
+                        <option value="09:00:00">09h00</option>
+                        <option value="09:30:00">09h30</option>
+                        <option value="10:00:00">10h00</option>
+                        <option value="10:30:00">10h30</option>
+                        <option value="11:00:00">11h00</option>
+                        <option value="11:30:00">11h30</option>
+                        <option value="12:00:00">12h00</option>
+                        <option value="12:30:00">12h30</option>
                     </optgroup>
                     <optgroup label="L'après midi">
-                        <option value="14h00">14h00</option>
-                        <option value="14h30">14h30</option>
-                        <option value="15h00">15h00</option>
-                        <option value="15h30">15h30</option>
-                        <option value="16h00">16h00</option>
-                        <option value="16h30">16h30</option>
-                        <option value="17h00">17h00</option>
-                        <option value="17h30">17h30</option>
-                        <option value="18h00">18h00</option>
+                        <option value="14:00:00">14h00</option>
+                        <option value="14:30:00">14h30</option>
+                        <option value="15:00:00">15h00</option>
+                        <option value="15:30:00">15h30</option>
+                        <option value="16:00:00">16h00</option>
+                        <option value="16:30:00">16h30</option>
+                        <option value="17:00:00">17h00</option>
+                        <option value="17:30:00">17h30</option>
+                        <option value="18:00:00">18h00</option>
                     </optgroup>
                 </select>
                 <!-- <input type="text" id="myresult"/> -->
@@ -89,11 +87,10 @@
         while($row = $stm->fetch()){
             $table_result[] = $row['Username'];
         }
-
         // echo'<pre>';
         // print_r($table_result);
         // echo '</pre>';
-    }  
+    }
 ?>
 
 <?php 
@@ -102,6 +99,16 @@
         echo $_POST['autocomplete'] . "</br>";
         echo $_POST['rdv'] . "</br>";
         echo $_POST['houre'] . "</br>";
+
+        $stmt = $con->prepare("INSERT INTO `rendez-vous` VALUES(:docteur_username,:date_rdv, :time_rdv, :patient_username)");
+        $stmt->execute(array(
+            'docteur_username'  => $_POST['autocomplete'],
+            'date_rdv'          => $_POST['rdv'],
+            'time_rdv'          => $_POST['houre'],
+            'patient_username'  => $_SESSION['Username'] . " " . $_SESSION['Prenom']
+        ));
+
+  
     }
 ?>
 

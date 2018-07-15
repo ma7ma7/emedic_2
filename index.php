@@ -25,7 +25,7 @@
         $pass_auth = $_POST['conn_password'];
         $hash_pass_auth = sha1($pass_auth);
 
-        $stm = $con->prepare('SELECT ID,Email,Password,GroupID,Nom FROM users WHERE Email = ? AND Password = ? AND GroupID > 0');
+        $stm = $con->prepare('SELECT Prenom,ID,Email,Password,GroupID,Nom FROM users WHERE Email = ? AND Password = ? AND GroupID > 0');
 
         $stm->execute(
             array(
@@ -39,10 +39,12 @@
         $username = $row['Nom'];
         $groupID = $row['GroupID'];
         $userID = $row['ID'];
+        $prenome = $row['Prenom'];
 
         if ($count > 0) {
 
             $_SESSION['Username'] = $username;
+            $_SESSION['Prenom'] = $prenome;
             $_SESSION['GroupID'] = $groupID;
             $_SESSION['userID'] = $userID;
 
