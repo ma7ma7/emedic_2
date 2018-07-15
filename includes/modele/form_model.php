@@ -29,10 +29,10 @@
                     ));
 
                     echo "<h2>Inscription réussie : " . $_POST['nom'] . " - Connectez-Vous - </h2>";
-                    echo "<script>setTimeout(\"location.href = '../../index.php';\",1500);</script>";
+                    echo "<script>setTimeout(\"location.href = '/fizou/index.php';\",1500);</script>";
                 }else{
                     echo "<h2>Mot de pass incorrect</h2>";
-                    echo "<script>setTimeout(\"location.href = '../../index.php';\",1500);</script>";
+                    echo "<script>setTimeout(\"location.href = '/fizou/index.php';\",1500);</script>";
                 }
   
              }

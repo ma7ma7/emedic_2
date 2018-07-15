@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?= $css . "font-awesome.min.css"; ?>" />
     <link rel="stylesheet" href="<?= $css . "fonts.css"; ?>" />
     <link rel="stylesheet" href="<?= $css . "normalize.css"; ?>" />
+    <link rel="stylesheet" href="<?= $css . "jquery-ui.min.css"; ?>" />
 </head>
 <body>
     

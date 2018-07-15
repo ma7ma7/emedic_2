@@ -36,6 +36,36 @@
                 </div>
             </div>
         </div>
+        <div class="content">
+            <form>
+                <input id="autocomplete"/>
+                <input type="date" name="rdv"/>
+                <select name="houre">
+                    <optgroup label="Le matin">
+                        <option value="09h00">09h00</option>
+                        <option value="09h30">09h30</option>
+                        <option value="10h00">10h00</option>
+                        <option value="10h30">10h30</option>
+                        <option value="11h00">11h00</option>
+                        <option value="11h30">11h30</option>
+                        <option value="12h00">12h00</option>
+                        <option value="12h30">12h30</option>
+                    </optgroup>
+                    <optgroup label="L'après midi">
+                        <option value="14h00">14h00</option>
+                        <option value="14h30">14h30</option>
+                        <option value="15h00">15h00</option>
+                        <option value="15h30">15h30</option>
+                        <option value="16h00">16h00</option>
+                        <option value="16h30">16h30</option>
+                        <option value="17h00">17h00</option>
+                        <option value="17h30">17h30</option>
+                        <option value="18h00">18h00</option>
+                    </optgroup>
+                </select>
+                <input type="submit" value="valider"/>
+            </form>
+        </div>
 <?php
         }
     }else{
